@@ -10,7 +10,7 @@ import android.os.Bundle;
 import com.youssef.washtaby.R;
 import com.youssef.washtaby.Ui.Fragments.Subscription.SubscriptionDetails;
 
-public class Package extends AppCompatActivity {
+public class SuscriptionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

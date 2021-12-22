@@ -2,11 +2,15 @@ package com.youssef.washtaby.Ui.Fragments.Subscription;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.youssef.washtaby.R;
 
@@ -25,6 +29,8 @@ public class WebVIewFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    WebView webView;
 
     public WebVIewFragment() {
         // Required empty public constructor
@@ -63,4 +69,13 @@ public class WebVIewFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_web_v_iew, container, false);
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        webView=view.findViewById(R.id.web_view);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl(mParam1);
+    }
+
 }
